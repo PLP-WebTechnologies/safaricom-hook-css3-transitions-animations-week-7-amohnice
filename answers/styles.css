@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hover-button {
+    transition: transform 0.3s, background-color 0.3s;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+.hover-button:hover {
+    transform: scale(1.1);
+    background-color: #007bff;
+    color: white;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease;
+}
+
+.modal.show {
+    display: block;
+    opacity: 1;
+}
+
+.close-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background-color: #d32f2f;
+}
+
+.error {
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.dynamic-banner {
+    width: 100%;
+    height: 50px;
+    background-color: #007bff;
+    animation: slide-in 1s forwards;
+}
+
+.loading-spinner {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #007bff;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
