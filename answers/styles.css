@@ -1,5 +1,9 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+    color: #343a40;
     transition: background-color 0.5s;
 }
 
@@ -7,6 +11,14 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #007bff;
 }
 
 .hover-button {
@@ -14,12 +26,16 @@ body {
     padding: 10px 20px;
     margin: 10px;
     font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
 }
 
 .hover-button:hover {
     transform: scale(1.1);
-    background-color: #007bff;
-    color: white;
+    background-color: #0056b3;
 }
 
 .modal {
@@ -28,15 +44,24 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
     transition: opacity 0.5s ease;
 }
 
 .modal.show {
-    display: block;
+    display: flex;
     opacity: 1;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .close-button {
@@ -45,6 +70,7 @@ body {
     border: none;
     padding: 10px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .close-button:hover {
@@ -53,10 +79,46 @@ body {
 
 .error {
     color: red;
+    font-size: 0.9em;
 }
 
 .hidden {
     display: none;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.dropdown {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
 @keyframes slide-in {
@@ -81,6 +143,11 @@ body {
     width: 100%;
     height: 50px;
     background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
     animation: slide-in 1s forwards;
 }
 
@@ -91,6 +158,7 @@ body {
     width: 80px;
     height: 80px;
     animation: spin 2s linear infinite;
+    margin: 20px auto;
 }
 
 @keyframes spin {

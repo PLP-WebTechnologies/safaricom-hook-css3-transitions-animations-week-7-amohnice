@@ -13,6 +13,9 @@
         <!-- Interactive Button -->
         <button class="hover-button" onclick="toggleBackground()">Toggle Background Color</button>
 
+        <!-- Animated Banner -->
+        <div class="dynamic-banner">Welcome to the Interactive Webpage!</div>
+
         <!-- Slider with Real-Time Feedback -->
         <div>
             <label for="textSizeSlider">Adjust Text Size:</label>
@@ -23,34 +26,39 @@
         <!-- Modal with Event Listeners -->
         <button class="hover-button" onclick="openModal()">Open Modal</button>
         <div id="myModal" class="modal">
-            <p>This is a modal window.</p>
-            <button class="close-button" onclick="closeModal()">Close</button>
+            <div class="modal-content">
+                <p>This is a modal window.</p>
+                <button class="close-button" onclick="closeModal()">Close</button>
+            </div>
         </div>
+
+        <!-- Loading Spinner -->
+        <div class="loading-spinner"></div>
 
         <!-- Form with Validation -->
         <h2>Sign Up</h2>
         <form id="signUpForm" onsubmit="return validateForm()">
-            <div>
+            <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
+                <input type="text" id="name" name="name" class="form-control">
                 <span id="nameError" class="error hidden">Name must be at least 3 characters.</span>
             </div>
-            <div>
+            <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" class="form-control">
                 <span id="emailError" class="error hidden">Please enter a valid email address.</span>
             </div>
-            <div>
+            <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="password" class="form-control">
                 <span id="passwordError" class="error hidden">Password must be at least 8 characters, with one uppercase letter and one number.</span>
             </div>
-            <button type="submit">Sign Up</button>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
         </form>
 
         <!-- Dropdown Menu -->
         <h2>Choose an Option</h2>
-        <select id="dropdown" onchange="showMessage()">
+        <select id="dropdown" onchange="showMessage()" class="dropdown">
             <option value="">Select...</option>
             <option value="Option 1">Option 1</option>
             <option value="Option 2">Option 2</option>
